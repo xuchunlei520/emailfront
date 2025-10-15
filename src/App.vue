@@ -401,7 +401,7 @@ onUnmounted(() => {
   font-weight: bold;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: .5rem;
 }
 
 .checkmark {
@@ -420,7 +420,7 @@ onUnmounted(() => {
   border: 1px solid #5cb85c;
   color: white;
   padding: 8px 16px;
-  border-radius: 6px;
+  border-radius: .375rem;
   cursor: pointer;
   font-size: 14px;
   font-weight: 500;
@@ -459,7 +459,7 @@ onUnmounted(() => {
   border: none;
   color: white;
   padding: .5rem 1rem;
-  border-radius: 6px;
+  border-radius: .375rem;
   cursor: pointer;
   font-size: .875rem;
   display: flex;
@@ -485,36 +485,47 @@ onUnmounted(() => {
 /* 主要内容区域 */
 .main-content {
   background-color: #2c2c2c;
-  min-height: calc(100vh - 60px);
+  height: calc(100vh - 3.75rem);
+  display: flex;
+  flex-direction: column;
 }
 
 /* 收件箱容器 */
 .inbox-container {
   background-color: #f6f7f9;
+  height: 50%;
   padding: 2.5rem 1.25rem;
-  min-height: 31.25rem;
+  display: flex;
+  flex-direction: column;
 }
 
 /* 收件箱区域背景 */
 .inbox-section {
   background-color: white;
-  min-height: 25rem;
-  max-width: 50rem;
+  flex: 1;
+  /* max-width: 50rem; */
+  width: 53vw;
   margin: 0 auto;
-  border-radius: 12px;
+  border-radius: .75rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
 
 .email-section {
+  height: 50%;
   padding: 3.75rem 1.25rem 2.5rem;
   max-width: 50rem;
   margin: 0 auto;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .email-container {
   border: 2px dashed #666;
-  border-radius: 12px;
+  border-radius: .75rem;
   padding: 2.5rem 1.875rem;
   margin-bottom: 1.875rem;
   background-color: #333;
@@ -532,16 +543,16 @@ onUnmounted(() => {
   align-items: center;
   gap: .9375rem;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .email-input {
   background-color: #444;
   border: 2px solid #666;
-  border-radius: 8px;
+  border-radius: .5rem;
   padding: .9375rem 1.25rem;
   color: white;
-  font-size: 18px;
+  font-size: 1.125rem;
   min-width: 18.75rem;
   text-align: center;
   outline: none;
@@ -561,7 +572,7 @@ onUnmounted(() => {
   border: 1px solid #555;
   color: white;
   padding: .75rem 1rem;
-  border-radius: 8px;
+  border-radius: .5rem;
   cursor: pointer;
   font-size: .875rem;
   font-weight: 500;
@@ -634,7 +645,7 @@ onUnmounted(() => {
 .action-btn {
   background-color: #e0e0e0;
   border: none;
-  border-radius: 8px;
+  border-radius: .5rem;
   padding: .75rem 1.25rem;
   color: #333;
   font-size: .875rem;
@@ -654,15 +665,6 @@ onUnmounted(() => {
   font-size: 1rem;
 }
 
-/* 收件箱区域 */
-.inbox-section {
-  background-color: white;
-  min-height: 25rem;
-  max-width: 50rem;
-  margin: .625rem auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
 
 .inbox-header {
   background-color: #2c2c2c;
@@ -670,7 +672,7 @@ onUnmounted(() => {
   display: flex;
   padding: .9375rem 1.25rem;
   font-weight: 500;
-  border-radius: 12px 12px 0 0;
+  border-radius: .75rem .75rem 0 0;
 }
 
 .inbox-header-item {
@@ -687,10 +689,12 @@ onUnmounted(() => {
 }
 
 .inbox-content {
-  padding: 3.75rem 1.25rem;
+  padding: 1.25rem;
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-y: auto;
 }
 
 .empty-inbox {
@@ -903,37 +907,5 @@ onUnmounted(() => {
   color: #666;
 }
 
-/* 响应式设计 */
-@media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    height: auto;
-    padding: .9375rem 0;
-    gap: .9375rem;
-  }
-  
-  .header-left, .header-right {
-    justify-content: center;
-  }
-  
-  .email-input-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .email-input {
-    min-width: 15.625rem;
-  }
-  
-  .action-buttons {
-    flex-wrap: wrap;
-    gap: .625rem;
-  }
-  
-  .action-btn {
-    flex: 1;
-    min-width: 7.5rem;
-    justify-content: center;
-  }
-}
+
 </style>
