@@ -357,7 +357,7 @@ onUnmounted(() => {
 /* 顶部导航栏样式 */
 .header {
   background-color: #2c2c2c;
-  padding: 0 20px;
+  padding: 0 1.25rem;
   border-bottom: 1px solid #404040;
 }
 
@@ -365,14 +365,14 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 75rem;
   margin: 0 auto;
-  height: 60px;
+  height: 3.75rem;
 }
 
 .header-left {
   display: flex;
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .store-link {
@@ -380,8 +380,8 @@ onUnmounted(() => {
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 5px;
-  font-size: 14px;
+  gap: .3125rem;
+  font-size: .875rem;
   transition: opacity 0.2s;
 }
 
@@ -445,8 +445,8 @@ onUnmounted(() => {
 }
 
 .refresh-icon {
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   filter: invert(1);
 }
 
@@ -458,13 +458,13 @@ onUnmounted(() => {
   background: none;
   border: none;
   color: white;
-  padding: 8px 16px;
+  padding: .5rem 1rem;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: .875rem;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: .3125rem;
   transition: background-color 0.2s;
 }
 
@@ -491,23 +491,23 @@ onUnmounted(() => {
 /* 收件箱容器 */
 .inbox-container {
   background-color: #f6f7f9;
-  padding: 40px 20px;
-  min-height: 500px;
+  padding: 2.5rem 1.25rem;
+  min-height: 31.25rem;
 }
 
 /* 收件箱区域背景 */
 .inbox-section {
   background-color: white;
-  min-height: 400px;
-  max-width: 800px;
+  min-height: 25rem;
+  max-width: 50rem;
   margin: 0 auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .email-section {
-  padding: 60px 20px 40px;
-  max-width: 800px;
+  padding: 3.75rem 1.25rem 2.5rem;
+  max-width: 50rem;
   margin: 0 auto;
   text-align: center;
 }
@@ -515,22 +515,22 @@ onUnmounted(() => {
 .email-container {
   border: 2px dashed #666;
   border-radius: 12px;
-  padding: 40px 30px;
-  margin-bottom: 30px;
+  padding: 2.5rem 1.875rem;
+  margin-bottom: 1.875rem;
   background-color: #333;
 }
 
 .email-title {
   color: white;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: bold;
-  margin: 0 0 30px 0;
+  margin: 0 0 1.875rem 0;
 }
 
 .email-input-container {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: .9375rem;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -539,10 +539,10 @@ onUnmounted(() => {
   background-color: #444;
   border: 2px solid #666;
   border-radius: 8px;
-  padding: 15px 20px;
+  padding: .9375rem 1.25rem;
   color: white;
   font-size: 18px;
-  min-width: 300px;
+  min-width: 18.75rem;
   text-align: center;
   outline: none;
 }
@@ -553,17 +553,17 @@ onUnmounted(() => {
 
 .email-actions {
   display: flex;
-  gap: 10px;
+  gap: .625rem;
 }
 
 .copy-btn, .change-btn {
   background: linear-gradient(145deg, #3a3a3a, #2a2a2a);
   border: 1px solid #555;
   color: white;
-  padding: 12px 16px;
+  padding: .75rem 1rem;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: .875rem;
   font-weight: 500;
   transition: all 0.3s ease;
   box-shadow: 
@@ -571,8 +571,8 @@ onUnmounted(() => {
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
-  gap: 8px;
-  min-width: 80px;
+  gap: .5rem;
+  min-width: 5rem;
   justify-content: center;
 }
 
@@ -603,19 +603,19 @@ onUnmounted(() => {
 }
 
 .copy-icon {
-  width: 18px;
+  width: 1.125rem;
   height: 18px;
   filter: invert(1);
 }
 
 .change-icon {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
 }
 
 .description {
   color: white;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.6;
   margin: 0;
   opacity: 0.9;
@@ -625,8 +625,8 @@ onUnmounted(() => {
 .action-buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 20px;
+  gap: 1.25rem;
+  padding: 1.25rem;
   background-color: #f5f5f5;
   border-top: 1px solid #ddd;
 }
@@ -635,14 +635,14 @@ onUnmounted(() => {
   background-color: #e0e0e0;
   border: none;
   border-radius: 8px;
-  padding: 12px 20px;
+  padding: .75rem 1.25rem;
   color: #333;
-  font-size: 14px;
+  font-size: .875rem;
   font-weight: 500;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: .5rem;
   transition: background-color 0.2s;
 }
 
@@ -651,15 +651,15 @@ onUnmounted(() => {
 }
 
 .action-icon {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 /* 收件箱区域 */
 .inbox-section {
   background-color: white;
-  min-height: 400px;
-  max-width: 800px;
-  margin: 10px auto;
+  min-height: 25rem;
+  max-width: 50rem;
+  margin: .625rem auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -668,7 +668,7 @@ onUnmounted(() => {
   background-color: #2c2c2c;
   color: white;
   display: flex;
-  padding: 15px 20px;
+  padding: .9375rem 1.25rem;
   font-weight: 500;
   border-radius: 12px 12px 0 0;
 }
@@ -687,7 +687,7 @@ onUnmounted(() => {
 }
 
 .inbox-content {
-  padding: 60px 20px;
+  padding: 3.75rem 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -699,7 +699,7 @@ onUnmounted(() => {
 }
 
 .empty-icon {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   opacity: 0.5;
   display: flex;
   justify-content: center;
@@ -707,8 +707,8 @@ onUnmounted(() => {
 }
 
 .rotating-icon {
-  width: 80px;
-  height: 80px;
+  width: 5rem;
+  height: 5rem;
   animation: rotate 2s linear infinite;
 }
 
@@ -722,13 +722,13 @@ onUnmounted(() => {
 }
 
 .empty-text {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.5;
 }
 
 .empty-text div:first-child {
   font-weight: 500;
-  margin-bottom: 5px;
+  margin-bottom: .3125rem;
 }
 
 /* 邮件列表样式 */
@@ -747,7 +747,7 @@ onUnmounted(() => {
 .email-item {
   display: flex;
   align-items: center;
-  padding: 15px 20px;
+  padding: .9375rem 1.25rem;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
@@ -770,7 +770,7 @@ onUnmounted(() => {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  margin-right: 15px;
+  margin-right: .9375rem;
 }
 
 .email-subject {
@@ -779,21 +779,21 @@ onUnmounted(() => {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  margin-right: 15px;
+  margin-right: .9375rem;
 }
 
 .email-actions {
   display: flex;
-  gap: 8px;
+  gap: .5rem;
 }
 
 .email-action-btn {
   background: none;
   border: none;
-  padding: 8px;
+  padding: .5rem;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
   transition: background-color 0.2s;
 }
 
@@ -816,34 +816,34 @@ onUnmounted(() => {
   from {
     opacity: 0;
     max-height: 0;
-    padding: 0 20px;
+    padding: 0 1.25rem;
   }
   to {
     opacity: 1;
     max-height: 500px;
-    padding: 20px;
+    padding: 1.25rem;
   }
 }
 
 .email-detail-header {
-  margin-bottom: 15px;
+  margin-bottom: .9375rem;
 }
 
 .email-detail-header h3 {
-  margin: 0 0 10px 0;
+  margin: 0 0 .625rem 0;
   color: #333;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 600;
 }
 
 .email-detail-meta {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: .3125rem;
 }
 
 .meta-item {
-  font-size: 14px;
+  font-size: .875rem;
   color: #666;
   line-height: 1.4;
 }
@@ -857,8 +857,8 @@ onUnmounted(() => {
   background-color: white;
   border: 1px solid #e9ecef;
   border-radius: 6px;
-  padding: 15px;
-  margin-top: 10px;
+  padding: .9375rem;
+  margin-top: .625rem;
 }
 
 .email-html-content {
@@ -894,7 +894,7 @@ onUnmounted(() => {
   color: #999;
   font-style: italic;
   text-align: center;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 /* 加载状态 */
@@ -908,8 +908,8 @@ onUnmounted(() => {
   .header-content {
     flex-direction: column;
     height: auto;
-    padding: 15px 0;
-    gap: 15px;
+    padding: .9375rem 0;
+    gap: .9375rem;
   }
   
   .header-left, .header-right {
@@ -922,17 +922,17 @@ onUnmounted(() => {
   }
   
   .email-input {
-    min-width: 250px;
+    min-width: 15.625rem;
   }
   
   .action-buttons {
     flex-wrap: wrap;
-    gap: 10px;
+    gap: .625rem;
   }
   
   .action-btn {
     flex: 1;
-    min-width: 120px;
+    min-width: 7.5rem;
     justify-content: center;
   }
 }
