@@ -12,7 +12,8 @@ const currentEmailData = ref(null)
 const emails = ref([])
 const loading = ref(false)
 const selectedEmailId = ref(null)
-
+// 复制状态
+const isCopied = ref(false)
 // 生成新的临时邮箱地址
 const generateNewEmail = async () => {
   try {
@@ -34,7 +35,7 @@ const generateNewEmail = async () => {
       tempEmail.value = result.data.address
       currentEmailData.value = result.data
       emails.value = [] // 清空之前的邮件
-      console.log('新邮箱生成成功:', result.data)
+      // console.log('新邮箱生成成功:', result.data)
     }
   } catch (error) {
     console.error('生成邮箱失败:', error)
@@ -48,7 +49,7 @@ const generateNewEmail = async () => {
 const copyEmail = async () => {
   try {
     await navigator.clipboard.writeText(tempEmail.value)
-    alert('邮箱地址已复制到剪贴板')
+    isCopied.value = true
   } catch (err) {
     console.error('复制失败:', err)
     // 降级方案
@@ -58,7 +59,7 @@ const copyEmail = async () => {
     textArea.select()
     document.execCommand('copy')
     document.body.removeChild(textArea)
-    alert('邮箱地址已复制到剪贴板')
+    isCopied.value = true
   }
 }
 
@@ -90,13 +91,13 @@ const refreshInbox = async (silent = false) => {
       emails.value = newEmails
       
       if (hasNewEmails) {
-        console.log('发现新邮件，界面已更新')
+        // console.log('发现新邮件，界面已更新')
         // 如果有新邮件且当前没有展开的邮件详情，可以显示提示
         if (!selectedEmailId.value && newEmails.length > 0) {
-          console.log('新邮件:', newEmails.filter(email => !oldEmailIds.has(email.id)))
+          // console.log('新邮件:', newEmails.filter(email => !oldEmailIds.has(email.id)))
         }
       } else if (!silent) {
-        console.log('邮件列表更新（无新邮件）:', result.data)
+        // console.log('邮件列表更新（无新邮件）:', result.data)
       }
     }
   } catch (error) {
@@ -138,7 +139,7 @@ const deleteSingleEmail = async (emailId) => {
     if (result.success) {
       // 刷新邮件列表
       await refreshInbox()
-      console.log('邮件删除成功')
+      // console.log('邮件删除成功')
     }
   } catch (error) {
     console.error('删除邮件失败:', error)
@@ -192,12 +193,12 @@ onUnmounted(() => {
           </div>
         </div>
         
-        <div class="header-right">
+        <!-- <div class="header-right">
           <button class="refresh-btn" @click="refreshInbox(false)" :disabled="loading" title="刷新收件箱">
             <img :src="UpdateIcon" alt="刷新" :class="{ 'rotating-icon': loading }" class="refresh-icon" />
             {{ loading ? '刷新中...' : '刷新' }}
           </button>
-        </div>
+        </div> -->
         
         <!-- <div class="header-right">
           <button class="temp-number-btn">
@@ -223,7 +224,7 @@ onUnmounted(() => {
             />
             <div class="email-actions">
               <button class="copy-btn" @click="copyEmail" title="复制邮箱地址">
-                <img :src="CopyIcon" alt="复制" class="copy-icon" />
+                <img :src="CopyIcon" alt="复制" class="copy-icon" />{{ isCopied ? '已复制' : '' }}
               </button>
               <button class="change-btn" @click="generateNewEmail" title="换一个邮箱地址">
                 <span class="change-icon">换一个</span>
